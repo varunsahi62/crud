@@ -1,0 +1,112 @@
+body {
+  /* background: linear-gradient(to left, #ff6e7f, #bfe9ff); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  letter-spacing: 2px;
+  color: black;
+}
+
+table {
+  width: 50%;
+}
+
+th,
+td {
+  border: 1px solid black;
+  text-align: center;
+  font-family: "ABeeZee", sans-serif;
+}
+
+.edit-btn {
+  background-color: #5bc0de;
+  font-size: 14px;
+  height: 35px;
+  width: 80px;
+  border: none;
+  font-family: "ABeeZee", sans-serif;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 2px;
+  /* display: none; */
+}
+
+.update-box {
+  border: 2px solid black;
+}
+
+.btn-class {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.dummy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5bc0de;
+  font-size: 14px;
+  height: 35px;
+  width: 80px;
+  border: none;
+  font-family: "ABeeZee", sans-serif;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 2px;
+}
+
+.del-btn {
+  background-color: #d9534f;
+  font-size: 14px;
+  height: 35px;
+  width: 80px;
+  border: none;
+  font-family: "ABeeZee", sans-serif;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 2px;
+}
+
+.submit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 400px;
+}
+
+.submit-form input {
+  height: 40px;
+  width: 350px;
+  border: none;
+  border-bottom: 2px solid black;
+  text-align: center;
+  font-family: "ABeeZee", sans-serif;
+  letter-spacing: 1px;
+  color: black;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.submit-form button {
+  height: 40px;
+  width: 350px;
+  border: none;
+  border-radius: 8px;
+  font-family: "ABeeZee", sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background-color: #0275d8;
+  height: 50px;
+  font-size: 16px;
+  color: white;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title -->
+    <title>Crud</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/styles.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Crud Opertaions</h1>
+
+    <table>
+      <tbody>
+        <th>S No.</th>
+        <th>Name</th>
+        <th>Ph Number</th>
+        <th>Email ID</th>
+        <th>Actions</th>
+        <% listItems.forEach(function(items){ %>
+        <tr>
+          <form action="/editDelete" method="post">
+            <td><%= items.serialNum %></td>
+            <td><%= items.name %></td>
+            <td><%= items.number %></td>
+            <td><%= items.emailID %></td>
+            <input type="hidden" name="itemID" value="<%= items._id %>" />
+            <td class="btn-class">
+              <p class="dummy-btn">Edit</p>
+              <button class="del-btn" name="button" value="delete">
+                Delete
+              </button>
+              <div class="update-box">
+                <br />
+                <br />
+                <br />
+                <br />
+                <input
+                  type="text"
+                  name="newName"
+                  placeholder="Name"
+                  autocomplete="off"
+                />
+                <br />
+                <br />
+                <input
+                  type="text"
+                  name="newNumber"
+                  placeholder="Phone Number"
+                  autocomplete="off"
+                />
+                <br />
+                <br />
+                <input
+                  type="email"
+                  name="newEmailID"
+                  placeholder="Email Address"
+                  autocomplete="off"
+                />
+                <br />
+                <br />
+                <br />
+                <button class="edit-btn" name="button" value="edit">
+                  Update
+                </button>
+                <br />
+              </div>
+            </td>
+          </form>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <form class="submit-form" action="/" method="post">
+      <input
+        type="text"
+        name="idNum"
+        placeholder="ID Number"
+        autocomplete="off"
+      />
+      <input
+        type="text"
+        name="serialNum"
+        placeholder="Serial Number"
+        autocomplete="off"
+      />
+      <input type="text" name="name" placeholder="Name" autocomplete="off" />
+      <input
+        type="text"
+        name="number"
+        placeholder="Phone Number"
+        autocomplete="off"
+      />
+      <input
+        type="email"
+        name="emailID"
+        placeholder="Email Address"
+        autocomplete="off"
+      />
+      <button type="submit">ADD Details</button>
+    </form>
+
+    <!-- jquery -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(".dummy-btn").click(function () {
+        $(".update-box").toggleClass("abhay");
+      });
+    </script>
+  </body>
+</html>
