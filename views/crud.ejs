@@ -40,39 +40,31 @@
                 Delete
               </button>
               <div class="update-box">
-                <br />
-                <br />
-                <br />
-                <br />
                 <input
                   type="text"
                   name="newName"
                   placeholder="Name"
                   autocomplete="off"
+                  value="<%= items.name %>"
                 />
-                <br />
-                <br />
                 <input
                   type="text"
                   name="newNumber"
                   placeholder="Phone Number"
                   autocomplete="off"
+                  value="<%= items.number %>"
                 />
-                <br />
-                <br />
                 <input
                   type="email"
                   name="newEmailID"
                   placeholder="Email Address"
                   autocomplete="off"
+                  value="<%= items.emailID %>"
                 />
-                <br />
-                <br />
-                <br />
                 <button class="edit-btn" name="button" value="edit">
                   Update
                 </button>
-                <br />
+                <p class="x-close">x</p>
               </div>
             </td>
           </form>
@@ -115,7 +107,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
       $(".dummy-btn").click(function () {
-        $(".update-box").toggleClass("abhay");
+        $(".update-box").slideToggle();
+        $(".dummy-btn").fadeOut();
+        $(".del-btn").fadeOut();
+      });
+
+      $(".x-close").click(function () {
+        $(".update-box").slideToggle();
+        $(".dummy-btn").fadeIn();
+        $(".del-btn").fadeIn();
       });
     </script>
   </body>

@@ -12,7 +12,11 @@ h1 {
 }
 
 table {
-  width: 50%;
+  width: 90%;
+}
+
+.items {
+  border: 2px solid red;
 }
 
 th,
@@ -22,11 +26,36 @@ td {
   font-family: "ABeeZee", sans-serif;
 }
 
+.update-box {
+  display: none;
+}
+
+.update-box input {
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 10px;
+  height: 30px;
+  font-size: 12px;
+}
+
+.x-close {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #292b2c;
+  border-radius: 8px;
+  font-size: 15px;
+  color: white;
+}
+
 .edit-btn {
   background-color: #5bc0de;
   font-size: 14px;
   height: 35px;
-  width: 80px;
+  width: 70px;
   border: none;
   font-family: "ABeeZee", sans-serif;
   color: white;
@@ -34,10 +63,6 @@ td {
   cursor: pointer;
   margin-right: 2px;
   /* display: none; */
-}
-
-.update-box {
-  border: 2px solid black;
 }
 
 .btn-class {
